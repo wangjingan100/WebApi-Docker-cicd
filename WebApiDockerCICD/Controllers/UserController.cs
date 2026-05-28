@@ -12,6 +12,7 @@ namespace WebApiDockerCICD.Controllers
         /// Get User Name
         /// </summary>
         /// <returns></returns>
+        [HttpGet]
         public string GetUser()
         {
             return "Hello World Get UserName";
