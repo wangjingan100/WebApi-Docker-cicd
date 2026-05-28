@@ -17,5 +17,11 @@ namespace WebApiDockerCICD.Controllers
         {
             return "Hello World Get Order Details 获取订单详情";
         }
+
+        [HttpGet]
+        [Route("GetOrderDetails")]
+        public string GetOrderDetails() {
+            return "Hello World Get Order Details 获取订单详情";
+        }
     }
 }
