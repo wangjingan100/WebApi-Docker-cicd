@@ -22,7 +22,7 @@ namespace WebApiDockerCICD.Controllers
         [Route("GetUserDetails")]
         public string GetUserDetails()
         {
-            return "Hello World Get User Details 获取用户详情";
+            return "Hello World Get User Details 获取用户详情333";
         }
     }
 }
