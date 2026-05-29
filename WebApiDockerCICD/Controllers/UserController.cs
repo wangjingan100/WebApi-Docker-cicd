@@ -24,5 +24,6 @@ namespace WebApiDockerCICD.Controllers
         {
             return "Hello World Get User Details 获取用户详情";
         }
+
     }
 }
