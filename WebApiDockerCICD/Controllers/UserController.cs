@@ -25,8 +25,7 @@ namespace WebApiDockerCICD.Controllers
             return "Hello World Get User Details 获取用户详情333";
         }
 
-        [HttpGet]
-        [Route("GetUserDetails/{id}")]
+        [HttpPost]
         public string GetUserDetailsById(int id)
         {
             return $"Hello World Get User Details By Id 获取用户详情通过ID: {id}";
