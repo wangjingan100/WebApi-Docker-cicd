@@ -23,5 +23,11 @@ namespace WebApiDockerCICD.Controllers
         public string GetOrderDetails() {
             return "Hello World Get Order Details 获取订单详情";
         }
+
+        [HttpPost]
+        public string GetOrderDetailsById(int id)
+        {
+            return $"Hello World Get Order Details By Id 获取订单详情通过ID: {id}";
+        }
     }
 }
