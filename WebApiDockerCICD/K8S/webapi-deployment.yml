@@ -67,7 +67,7 @@ spec:
     spec:                 
       containers:        
         - name: webapi-deployment-container-combin     
-          image: 192.168.10.130/jenkins_harbor/webapi-docker-cicd-k8s-pod-service-deployment:latest 
+          image: 192.168.10.130/jenkins_harbor/webapi-deployment:latest 
           imagePullPolicy: IfNotPresent 
           ports:          
             - containerPort: 8080
