@@ -21,7 +21,7 @@ metadata:
     app: webapi-pod-service
 spec:
   containers:
-    - image: 192.168.10.130/jenkins_harbor/webapi-docker-cicd-k8s:latest
+    - image: 192.168.10.130/jenkins_harbor/webapi-docker-cicd-k8s-pod-service:latest
       imagePullPolicy: IfNotPresent 
       name: webapi-pod-service-container
       ports:
