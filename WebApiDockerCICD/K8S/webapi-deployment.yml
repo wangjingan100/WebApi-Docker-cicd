@@ -1,0 +1,73 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service-deployment-combin
+spec:
+  selector:
+    app: nginx-pod-combin  
+  ports:
+    - port: 80 
+      targetPort: 80 
+      nodePort: 30040 
+  type: NodePort
+
+---  
+
+apiVersion: apps/v1      
+kind: Deployment         
+metadata:               
+  name: nginx-deployment-combin  
+spec:                   
+  replicas: 3           
+  selector:              
+    matchLabels:          
+      app: nginx-pod-combin         
+  template:              
+    metadata:
+      labels:           
+        app: nginx-pod-combin
+    spec:                
+      containers:       
+        - name: nginx-container-combin     
+          image: 192.168.10.130/wja_repo/nginx:latest 
+          imagePullPolicy: IfNotPresent 
+          ports:            
+            - containerPort: 80
+            
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapi-service-deployment-combin  
+spec:
+  selector:
+    app: webapi-deployment-pod-combin   
+  ports:
+    - port: 80 
+      targetPort: 80
+      nodePort: 30041
+  type: NodePort
+
+---
+
+apiVersion: apps/v1     
+kind: Deployment        
+metadata:                
+  name: webapi-deployment-combin    
+spec:                     
+  replicas: 3           
+  selector:               
+    matchLabels:         
+      app: webapi-deployment-pod-combin          
+  template:              
+    metadata:
+      labels:           
+        app: webapi-deployment-pod-combin  
+    spec:                 
+      containers:        
+        - name: webapi-deployment-container-combin     
+          image: 192.168.10.130/jenkins_harbor/webapi-docker-cicd-k8s-pod-service-deployment:latest 
+          imagePullPolicy: IfNotPresent 
+          ports:          
+            - containerPort: 80
