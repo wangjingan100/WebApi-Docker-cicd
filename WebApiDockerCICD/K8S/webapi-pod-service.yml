@@ -1,7 +1,7 @@
 ﻿apiVersion: v1
 kind: Service
 metadata:
-  name: webapi-pod-service-v1
+  name: webapi-pod-service
 spec:
   selector:
     app: webapi-pod-service  
