@@ -70,4 +70,4 @@ spec:
           image: 192.168.10.130/jenkins_harbor/webapi-docker-cicd-k8s-pod-service-deployment:latest 
           imagePullPolicy: IfNotPresent 
           ports:          
-            - containerPort: 80
+            - containerPort: 8080
