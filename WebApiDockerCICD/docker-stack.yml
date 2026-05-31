@@ -1,0 +1,16 @@
+﻿version: "3.8"
+services:
+  nginx:
+    image: 192.168.10.130/wja_repo/nginx:latest
+    ports:
+      - 8093:80
+    deploy:
+      mode: replicated
+      replicas: 4
+  webapi:
+    image: 192.168.10.130/jenkins_harbor/webapi-docker-stack:latest
+    ports:
+      - 8094:8080
+    deploy:
+      mode: replicated
+      replicas: 3
