@@ -13,5 +13,11 @@ namespace WebApiDockerCICD.Controllers
         {
             return Ok(new { Message = "Hello from ProductController!" });
         }
+
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            return Ok(new { Message = $"Hello from ProductController! You requested product {id}" });
+        }
     }
 }
