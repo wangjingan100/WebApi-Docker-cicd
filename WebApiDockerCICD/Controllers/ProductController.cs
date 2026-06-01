@@ -19,5 +19,12 @@ namespace WebApiDockerCICD.Controllers
         {
             return Ok(new { Message = $"Hello from ProductController! You requested product {id}" });
         }
+
+        [HttpPost]
+        public IActionResult Post()
+        {
+            // Here you would typically add the product to a database
+            return Ok(new { Message = $"Product created successfully!" });
+        }
     }
 }
