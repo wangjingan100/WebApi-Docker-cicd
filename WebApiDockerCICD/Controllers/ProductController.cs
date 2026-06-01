@@ -24,7 +24,7 @@ namespace WebApiDockerCICD.Controllers
         public IActionResult Post()
         {
             // Here you would typically add the product to a database
-            return Ok(new { Message = $"Product created successfully!" });
+            return Ok(new { Message = $"Product created successfully! 添加测试GitHub自动调用Jenkins功能" });
         }
     }
 }
